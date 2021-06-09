@@ -2,21 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Asteroid : MonoBehaviour
+public class ShipIA : MonoBehaviour
 {
+    // vai ficar em uma area/trajetoria circular em volta do player
+        // onde vai começar a atirar
+
+    // vai simplesmente em direção ao jogador 
+        // atirando ou 
+        // de forma kamikazi
+
+    [Header("Setup")]
+    public IAType iAType = IAType.Simple;
+
     [Header("Status")]
     public float speed = 1.2f;
 
     [Range(1f, 2f)]
     public float precision = 1.1f;
 
-    [Header("Debug")]
-    public Transform target;
+    private ShipShoot shoot;
 
+    private Transform target;
     private bool isReady = false;
 
     IEnumerator Start()
     {
+        shoot = GetComponent<ShipShoot>();
+
         while (target == null)
         {
             if (FindObjectOfType<Ship>() != null)
@@ -35,9 +47,18 @@ public class Asteroid : MonoBehaviour
 
     void Update()
     {
-        if (isReady)
+        if (iAType == IAType.Simple)
         {
+            if (target == null) return;
+            
             transform.position += transform.up * Time.deltaTime * speed;
+
+            if (shoot.canFire)
+                shoot.Shoot();
+        }
+        else
+        {
+            Debug.LogError("IAType.Advanced Not Implemented");
         }
     }
 
@@ -51,7 +72,12 @@ public class Asteroid : MonoBehaviour
         direction.x = tx - transform.position.x;
         direction.y = ty - transform.position.y;
 
-        transform.up = direction;
-        isReady = true;
+        transform.up = direction;            
+    }
+
+    public enum IAType
+    {
+        Simple,
+        Advanced
     }
 }
