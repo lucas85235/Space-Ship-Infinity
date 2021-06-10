@@ -28,7 +28,7 @@ public class ShipLife : MonoBehaviour
         {
             toDisableOnDie = new List<GameObject>();
 
-            for (int i = 0; i < transform.childCount; i++)
+            for (int i = 1; i < transform.childCount; i++)
             {
                 toDisableOnDie.Add(transform.GetChild(i).gameObject);
             }            
@@ -51,17 +51,29 @@ public class ShipLife : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Damage")
+        if (other.tag == "Shild")
+        {
+            var damage = other.GetComponent<Damage>();
+            SetLife(-damage.damage);
+
+            if (damage.canDestroy)
+                Destroy(other.gameObject);
+        }
+        
+        else if (other.tag == "Damage")
         {
             var damage = other.GetComponent<Damage>();
 
             if (damage.damageLayer == isPlayer)
             {
                 SetLife(-damage.damage);
-                Destroy(other.gameObject);
+
+                if (damage.canDestroy)
+                    Destroy(other.gameObject);
             }
         }
-        if (other.tag == "Player")
+
+        else if (other.tag == "Player")
         {
             SetLife(-maxLife);
         }

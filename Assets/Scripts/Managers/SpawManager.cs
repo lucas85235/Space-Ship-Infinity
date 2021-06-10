@@ -31,7 +31,8 @@ public class SpawManager : MonoBehaviour
         {
             if (item.spawChance > Random.Range(0f, 1f))
             {
-                Instantiate(item.item, spawPoints[r].position, Quaternion.identity);
+                var rItem = Random.Range(0, item.items.Count);
+                Instantiate(item.items[rItem], spawPoints[r].position, Quaternion.identity);
                 return;
             }
         }
@@ -45,7 +46,7 @@ public class SpawManager : MonoBehaviour
     [System.Serializable]
     public struct Item
     {
-        public GameObject item;
+        public List<GameObject> items;
 
         [Range(0f, 1f)]
         public float spawChance;

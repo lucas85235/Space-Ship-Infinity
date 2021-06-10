@@ -6,6 +6,7 @@ public class Damage : MonoBehaviour
 {
     public int damage = 10;
     public DamageLayer damageLayer;
+    public bool canDestroy = true;
 }
 
 public enum DamageLayer
