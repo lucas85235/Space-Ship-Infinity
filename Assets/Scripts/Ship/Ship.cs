@@ -6,11 +6,6 @@ using UnityEngine.Events;
 
 public class Ship : MonoBehaviour
 {
-    [Header("Stats")]
-    public float speed = 2f;
-    public float damage;
-    public float health;
-
     private ShipShoot shoot;
 
     void Start()
@@ -36,7 +31,7 @@ public class Ship : MonoBehaviour
     public void Move()
     {
         Vector3 move = new Vector3( Input.GetAxis("Horizontal"), Input.GetAxis("Vertical") );
-        transform.position += move * Time.deltaTime * speed;
+        transform.position += move * Time.deltaTime * StatsManager.i.speed;
     }
 
     public void Rotate()

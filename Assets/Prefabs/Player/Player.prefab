@@ -439,6 +439,7 @@ GameObject:
   - component: {fileID: 8852456996119288590}
   - component: {fileID: 355649283982795010}
   - component: {fileID: 1113839406}
+  - component: {fileID: 2039550074}
   - component: {fileID: 1125253632}
   m_Layer: 0
   m_Name: Player
@@ -514,9 +515,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c99d7165e8c4204a83cef8a9dc8260e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  damage: 0
-  health: 0
 --- !u!114 &355649283982795010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,6 +551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 100
   lifeBar: {fileID: 9196505893332034040}
+  initLifeBar: 0
   OnDie:
     m_PersistentCalls:
       m_Calls:
@@ -595,6 +594,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &2039550074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8852456996119288589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f2ad1887d96f74f97c325fdf296f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1125253632
 MonoBehaviour:
   m_ObjectHideFlags: 0

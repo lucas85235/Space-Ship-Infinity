@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class Coin : MonoBehaviour
 {
     [Header("Money")]
-    public int money;
     public Text moneyText;
     private string moneySaveKey = "money";
+    public int money { get; protected set; }
 
     public static Coin Instance;
 
@@ -21,14 +21,14 @@ public class Coin : MonoBehaviour
     {
         if ( !PlayerPrefs.HasKey(moneySaveKey) )
         {
-            PlayerPrefs.SetInt(moneySaveKey, 0);
+            PlayerPrefs.SetInt(moneySaveKey, 1000);
             PlayerPrefs.Save();
         }
 
-        SetMoney();
+        SetMoney(0);
     }
 
-    public void SetMoney( int increment = 0 )
+    public void SetMoney( int increment )
     {
         if (increment != 0)
         {

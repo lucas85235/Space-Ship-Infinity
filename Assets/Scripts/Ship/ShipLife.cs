@@ -9,6 +9,7 @@ public class ShipLife : MonoBehaviour
     [Header("Life")]
     public int maxLife = 100;
     public Slider lifeBar;
+    public bool initLifeBar = true;
     private int currentLife;
     
     [Header("Die Event")]
@@ -39,6 +40,9 @@ public class ShipLife : MonoBehaviour
 
         if (OnRevive == null)
             OnRevive = new UnityEvent();
+
+        if (!initLifeBar) 
+            return;
 
         currentLife = maxLife;
 
