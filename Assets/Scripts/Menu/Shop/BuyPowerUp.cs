@@ -8,6 +8,7 @@ public class BuyPowerUp : MonoBehaviour
     [Header("Set")]
     public PowerType itemType;
     public Button buy;
+    public Text priceText;
     public Image itemImage;
     public int itemPrice;
 
@@ -24,10 +25,12 @@ public class BuyPowerUp : MonoBehaviour
     {
         if (!GetPowerUp())
         {
+            priceText.text = itemPrice.ToString();
             buy.onClick.AddListener(() => TryBuy());
         }
         else
         {
+            priceText.text = "BUY";
             buy.interactable = false;
         }
     }
@@ -47,10 +50,11 @@ public class BuyPowerUp : MonoBehaviour
     {
         SetPowerUp(true);
 
-        Coin.Instance.SetMoney(-100);
+        Coin.Instance.SetMoney(-itemPrice);
         confirmBuy.Confirm = null;
         confirmBuy.gameObject.SetActive(false);
         buy.interactable = false;
+        priceText.text = "BUY";
     }
 
     public bool GetPowerUp()
@@ -84,8 +88,6 @@ public class BuyPowerUp : MonoBehaviour
 
         PlayerPrefs.Save();
     }
-
-
 }
 
 public enum PowerType

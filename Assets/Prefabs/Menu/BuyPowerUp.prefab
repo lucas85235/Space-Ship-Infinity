@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 2932264144823130132}
   - component: {fileID: 2932264144823130139}
   m_Layer: 5
-  m_Name: BuyPopup
+  m_Name: BuyPowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,10 +173,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 1
   buy: {fileID: 2932264144386625406}
+  priceText: {fileID: 2932264145592801965}
   itemImage: {fileID: 2932264145466562607}
   itemPrice: 100
-  beforeBuySprite: {fileID: 0}
-  afterBuySprite: {fileID: 0}
   confirmBuy: {fileID: 0}
   notHaveMoney: {fileID: 0}
 --- !u!1 &2932264145466562601
@@ -346,7 +345,7 @@ GameObject:
   - component: {fileID: 2932264146069216705}
   - component: {fileID: 2932264146069216706}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,10 +365,10 @@ RectTransform:
   m_Father: {fileID: 2932264145466562600}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 220, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2932264146069216705
 CanvasRenderer:

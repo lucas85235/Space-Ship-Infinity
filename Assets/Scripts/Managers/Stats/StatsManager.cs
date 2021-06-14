@@ -10,10 +10,7 @@ public class StatsManager : MonoBehaviour
         set => PlayerPrefs.SetInt(speedKey, value);
     }
 
-    // speed initial 2
-    // speed lv 2 - 3
-    // speed lv 3 - 4
-    // speed lv max - 5
+    public int[] speedLevels = new int[4] { 2, 3, 4, 5 };
 
     public int damage
     {
@@ -21,10 +18,7 @@ public class StatsManager : MonoBehaviour
         set => PlayerPrefs.SetInt(damageKey, value);
     }
 
-    // damage initial 15
-    // damage lv 2 - 20
-    // damage lv 3 - 25
-    // damage lv max - 30
+    public int[] damageLevels = new int[4] { 15, 20, 25, 30 };
 
     public int health
     {
@@ -32,10 +26,7 @@ public class StatsManager : MonoBehaviour
         set => PlayerPrefs.SetInt(healthKey, value);
     }
 
-    // health initial 60
-    // health lv 2 - 80
-    // health lv 3 - 100
-    // health lv max - 120
+    public int[] healthLevels = new int[4] { 60, 80, 100, 120 };
 
     private string speedKey = "speed";
     private string damageKey = "damage";
