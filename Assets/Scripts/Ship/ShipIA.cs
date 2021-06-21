@@ -53,7 +53,7 @@ public class ShipIA : MonoBehaviour
             
             transform.position += transform.up * Time.deltaTime * speed;
 
-            if (shoot.canFire)
+            if (shoot != null && shoot.canFire)
                 shoot.Shoot();
         }
         else

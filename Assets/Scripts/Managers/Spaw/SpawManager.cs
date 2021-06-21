@@ -29,13 +29,14 @@ public class SpawManager : MonoBehaviour
 
         foreach (var item in spawItems)
         {
-            if (item.items.Count == 0) return;
-            
-            if (item.spawChance > Random.Range(0f, 1f))
+            if (item.items.Count > 0)
             {
-                var rItem = Random.Range(0, item.items.Count);
-                Instantiate(item.items[rItem], spawPoints[r].position, Quaternion.identity);
-                return;
+                if (item.spawChance > Random.Range(0f, 1f))
+                {
+                    var rItem = Random.Range(0, item.items.Count);
+                    Instantiate(item.items[rItem], spawPoints[r].position, Quaternion.identity);
+                    return;
+                }                
             }
         }
     }

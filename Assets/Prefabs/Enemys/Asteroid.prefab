@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 8886754403706426495}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.538, y: 8.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 3572373038063667031}
   m_Father: {fileID: 0}
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 5
   lifeBar: {fileID: 8733211076355505393}
+  initLifeBar: 1
   OnDie:
     m_PersistentCalls:
       m_Calls:
@@ -177,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 20
   damageLayer: 0
+  canDestroy: 1
 --- !u!114 &2033608413543240544
 MonoBehaviour:
   m_ObjectHideFlags: 0
