@@ -38,6 +38,8 @@ public class Coin : MonoBehaviour
         }
 
         money = PlayerPrefs.GetInt( moneySaveKey );
-        moneyText.text = money.ToString();
+
+        if (moneyText != null)
+            moneyText.text = money.ToString();
     }
 }

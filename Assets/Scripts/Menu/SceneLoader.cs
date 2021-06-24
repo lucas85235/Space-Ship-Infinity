@@ -10,6 +10,16 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
+    public void LoadMenuTimer(float time)
+    {
+        Invoke("LoadMenu", time);
+    }
+
+    private void LoadMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

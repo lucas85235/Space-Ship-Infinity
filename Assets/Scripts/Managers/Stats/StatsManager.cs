@@ -54,6 +54,15 @@ public class StatsManager : MonoBehaviour
     private string power_2 = "power_2";
     private string power_3 = "power_3";
 
+    public int bestScore
+    {
+        get => PlayerPrefs.GetInt(scoreKey);
+        set => PlayerPrefs.SetInt(scoreKey, value);
+    }
+
+    private string scoreKey = "scoreKey";
+
+
     public static StatsManager i;
 
     private void Awake()
@@ -81,6 +90,9 @@ public class StatsManager : MonoBehaviour
         
         if ( !PlayerPrefs.HasKey(power_3) )
             powerH = false;
+
+        if ( !PlayerPrefs.HasKey(scoreKey) )
+            bestScore = 0;
 
         PlayerPrefs.Save();
     }

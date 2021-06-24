@@ -95,6 +95,11 @@ public class ShipLife : MonoBehaviour
             this.enabled = false;
             ToDisableOnDie(false);
             OnDie.Invoke();
+
+            if (isPlayer == DamageLayer.Player)
+            {
+                GameManager.i.GameOver();
+            }
         }
 
         if (lifeBar != null)
