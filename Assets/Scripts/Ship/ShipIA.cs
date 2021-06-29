@@ -21,11 +21,11 @@ public class ShipIA : MonoBehaviour
     [Range(1f, 2f)]
     public float precision = 1.1f;
 
-    [Header("Status")]
+    [Header("Advanced")]
     public float distToOrbit = 3f;
     public float orbitSpeed = 0.5f;
     public float updateDirectionTime = 1.5f;
-    public Vector3 rotateAxis = new Vector3(0, 0, 1);
+    private Vector3 rotateAxis = new Vector3(0, 0, 1);
 
     private ShipShoot shoot;
     private Transform target;

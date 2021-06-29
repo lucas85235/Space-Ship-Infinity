@@ -10,6 +10,17 @@ public class SpawManager : MonoBehaviour
     public float startTime = 2f;
     public float repeatTime = 1f;
     public List<Item> spawItems;
+    public Item powerUps;
+
+    [Header("Debug")]
+    public Difficulty currentDifficulty = Difficulty.Easy;
+
+    public static SpawManager i;
+
+    void Awake()
+    {
+        i = this;
+    }
 
     void Start()
     {
@@ -46,6 +57,14 @@ public class SpawManager : MonoBehaviour
         Destroy(other.gameObject);
     }
     
+    [System.Serializable]
+    public enum Difficulty
+    {
+        Easy,
+        Normal,
+        Hard,
+    }
+
     [System.Serializable]
     public struct Item
     {

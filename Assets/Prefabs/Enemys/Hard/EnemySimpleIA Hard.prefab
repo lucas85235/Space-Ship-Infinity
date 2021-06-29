@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 6090558046159696824}
   - component: {fileID: -1441157953937304883}
   m_Layer: 0
-  m_Name: EnemySimpleIA
+  m_Name: EnemySimpleIA Hard
   m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -339,13 +339,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iAType: 0
-  moveSpeed: 1.2
+  moveSpeed: 1.9
   precision: 1
   distToOrbit: 3
   orbitSpeed: 0.5
   updateDirectionTime: 1.5
-  rotateAxis: {x: 0, y: 0, z: 1}
-  target: {fileID: 0}
 --- !u!114 &6090558046159696826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2729085e96bbcc84683fd00778cef0e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLife: 50
+  maxLife: 100
   lifeBar: {fileID: 5907792080967944521}
   initLifeBar: 1
   OnDie:
@@ -383,7 +381,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: 15
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

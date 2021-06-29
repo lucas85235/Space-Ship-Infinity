@@ -284,11 +284,10 @@ GameObject:
   - component: {fileID: 6090558046159696827}
   - component: {fileID: 6090558046159696829}
   - component: {fileID: 6090558046159696826}
-  - component: {fileID: -350545284316152063}
   - component: {fileID: 6090558046159696824}
   - component: {fileID: -1441157953937304883}
   m_Layer: 0
-  m_Name: EnemyAdvancedIA
+  m_Name: EnemySimpleIA Easy
   m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -301,7 +300,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6090558046159696828}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.7, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -339,14 +338,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487e9f406fd2c05488c86d238aa1cfe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iAType: 1
+  iAType: 0
   moveSpeed: 1.2
   precision: 1
-  distToOrbit: 3.5
-  orbitSpeed: 0.4
-  updateDirectionTime: 0.5
-  rotateAxis: {x: 0, y: 0, z: 1}
-  target: {fileID: 0}
+  distToOrbit: 3
+  orbitSpeed: 0.5
+  updateDirectionTime: 1.5
 --- !u!114 &6090558046159696826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2729085e96bbcc84683fd00778cef0e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLife: 50
+  maxLife: 70
   lifeBar: {fileID: 5907792080967944521}
   initLifeBar: 1
   OnDie:
@@ -392,25 +389,6 @@ MonoBehaviour:
   OnRevive:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-350545284316152063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6090558046159696828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ca5b769ccafd824596a6b9431277a46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireRate: 1.75
-  bulletSpeed: 400
-  bulletSpawPoint: {fileID: 6090558046572355335}
-  bulletPrefab: {fileID: 3327505116799490574, guid: 4f516c70683093a4192d7b9616e4bceb, type: 3}
-  bulletSpawPoints: []
-  canFire: 1
-  activeTripleShoot: 0
 --- !u!114 &6090558046159696824
 MonoBehaviour:
   m_ObjectHideFlags: 0

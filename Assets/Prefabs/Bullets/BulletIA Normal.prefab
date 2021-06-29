@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -905543991661201447}
   - component: {fileID: 6380161345125569980}
   m_Layer: 0
-  m_Name: BulletIA
+  m_Name: BulletIA Normal
   m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,5 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fde40896e2aa2444ac5bea768ad40dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
-  damageInIA: 1
+  damage: 20
+  damageLayer: 0
+  canDestroy: 1

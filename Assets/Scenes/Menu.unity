@@ -567,6 +567,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1420477866335490121, guid: 1b05723f17e360f44b223bbd2ca93550, type: 3}
+      propertyPath: m_Text
+      value: HEALTH
+      objectReference: {fileID: 0}
     - target: {fileID: 7135845283231506146, guid: 1b05723f17e360f44b223bbd2ca93550, type: 3}
       propertyPath: itemType
       value: 2
@@ -1114,8 +1118,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 220, y: 60}
+  m_AnchoredPosition: {x: 0, y: -140}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &287479729
 MonoBehaviour:
@@ -1130,7 +1134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.9019608, g: 0.9019608, b: 0.9019608, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1138,13 +1142,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 42
+    m_Font: {fileID: 12800000, guid: 8d69bb60608df804aa75666018b20bcd, type: 3}
+    m_FontSize: 38
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 48
-    m_Alignment: 4
+    m_MinSize: 2
+    m_MaxSize: 60
+    m_Alignment: 7
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2009,6 +2013,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1420477866335490121, guid: 1b05723f17e360f44b223bbd2ca93550, type: 3}
+      propertyPath: m_Text
+      value: DAMAGE
+      objectReference: {fileID: 0}
     - target: {fileID: 7135845283231506146, guid: 1b05723f17e360f44b223bbd2ca93550, type: 3}
       propertyPath: itemType
       value: 1
@@ -2362,6 +2370,10 @@ PrefabInstance:
       propertyPath: notHaveMoney
       value: 
       objectReference: {fileID: 1267418840}
+    - target: {fileID: 4518482436655191108, guid: 6994ff89bf0b17046a3500bbdf232332, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5ce59d7a26aacd54b850dc40969a955f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6994ff89bf0b17046a3500bbdf232332, type: 3}
 --- !u!224 &769462465 stripped
@@ -3496,6 +3508,10 @@ PrefabInstance:
       propertyPath: notHaveMoney
       value: 
       objectReference: {fileID: 1267418840}
+    - target: {fileID: 4518482436655191108, guid: 6994ff89bf0b17046a3500bbdf232332, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 82ee344651026e44f85263c05b29afcf, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6994ff89bf0b17046a3500bbdf232332, type: 3}
 --- !u!224 &1403258558 stripped
@@ -4375,6 +4391,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1420477866335490121, guid: 1b05723f17e360f44b223bbd2ca93550, type: 3}
+      propertyPath: m_Text
+      value: SPEED
+      objectReference: {fileID: 0}
     - target: {fileID: 7135845283231506146, guid: 1b05723f17e360f44b223bbd2ca93550, type: 3}
       propertyPath: confirmBuy
       value: 
@@ -4488,5 +4508,9 @@ PrefabInstance:
       propertyPath: notHaveMoney
       value: 
       objectReference: {fileID: 1267418840}
+    - target: {fileID: 4518482436655191108, guid: 6994ff89bf0b17046a3500bbdf232332, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f8069a3f0cd2c6842af4a5cb6925e1ff, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6994ff89bf0b17046a3500bbdf232332, type: 3}

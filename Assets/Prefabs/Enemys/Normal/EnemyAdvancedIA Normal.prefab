@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 4638818233432233650}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.1, z: 10}
-  m_LocalScale: {x: 4.5, y: 4.5, z: 4.5}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 6090558046581323210}
   m_RootOrder: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 453fa4e1cd7ffb144a127d6346a33c13, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7f05d991efe48d458a34fd27cb9c85d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 6090558046159696824}
   - component: {fileID: -1441157953937304883}
   m_Layer: 0
-  m_Name: EnemySimpleShootIA
+  m_Name: EnemyAdvancedIA Normal
   m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -301,7 +301,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6090558046159696828}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.7, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -339,14 +339,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487e9f406fd2c05488c86d238aa1cfe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iAType: 0
-  moveSpeed: 1.2
+  iAType: 1
+  moveSpeed: 1.6
   precision: 1
-  distToOrbit: 3
+  distToOrbit: 3.75
   orbitSpeed: 0.5
-  updateDirectionTime: 1.5
-  rotateAxis: {x: 0, y: 0, z: 1}
-  target: {fileID: 0}
+  updateDirectionTime: 0.5
 --- !u!114 &6090558046159696826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2729085e96bbcc84683fd00778cef0e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLife: 50
+  maxLife: 60
   lifeBar: {fileID: 5907792080967944521}
   initLifeBar: 1
   OnDie:
@@ -384,7 +382,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: 15
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -404,10 +402,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca5b769ccafd824596a6b9431277a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 1.5
+  fireRate: 2
   bulletSpeed: 400
   bulletSpawPoint: {fileID: 6090558046572355335}
-  bulletPrefab: {fileID: 3327505116799490574, guid: 4f516c70683093a4192d7b9616e4bceb, type: 3}
+  bulletPrefab: {fileID: 3327505116799490574, guid: 99ec11678848de04082197a64fb10b92, type: 3}
   bulletSpawPoints: []
   canFire: 1
   activeTripleShoot: 0
