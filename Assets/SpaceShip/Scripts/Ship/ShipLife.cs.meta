@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2729085e96bbcc84683fd00778cef0e0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - lifeBar: {instanceID: 0}
+  - audioDestroy: {fileID: 8300000, guid: 0243d82e769346042b9be358bcbf25e9, type: 3}
+  - audioHit: {fileID: 8300000, guid: ccb2764de5d328f4e8fb9c0928099856, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
