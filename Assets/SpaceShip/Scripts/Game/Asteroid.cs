@@ -9,6 +9,7 @@ public class Asteroid : MonoBehaviour
 
     [Range(1f, 2f)]
     public float precision = 1.1f;
+    public bool useLife = true;
 
     [Header("Debug")]
     public Transform target;
@@ -38,7 +39,10 @@ public class Asteroid : MonoBehaviour
 
     void Update()
     {
-        if (m_life == null || !m_life.isAlive) return;
+        if (useLife)
+        {
+            if (m_life == null || !m_life.isAlive) return;
+        }
         
         if (m_isReady)
         {

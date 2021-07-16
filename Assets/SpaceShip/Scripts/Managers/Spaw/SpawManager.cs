@@ -9,11 +9,8 @@ public class SpawManager : MonoBehaviour
     [Header("Spaw Setup")]
     public float startTime = 2f;
     public float repeatTime = 1f;
+    public float incrementDifficulty = 5f;
     public List<Item> spawItems;
-    public Item powerUps;
-
-    [Header("Debug")]
-    public Difficulty currentDifficulty = Difficulty.Easy;
 
     public static SpawManager i;
 
@@ -32,6 +29,22 @@ public class SpawManager : MonoBehaviour
         }
 
         InvokeRepeating("Spaw", startTime, repeatTime);
+        StartCoroutine("DifficultyControl");
+    }
+
+    public IEnumerator DifficultyControl()
+    {
+        while(repeatTime > 1f)
+        {
+            yield return new WaitForSeconds(incrementDifficulty);
+
+            repeatTime -= 0.02f;
+
+            if (repeatTime <= 1f)
+            {
+                yield break;
+            }
+        }
     }
 
     public void Spaw()

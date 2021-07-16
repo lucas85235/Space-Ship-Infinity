@@ -282,10 +282,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6090558046159696830}
   - component: {fileID: 6090558046159696827}
+  - component: {fileID: 6506323680807217393}
   - component: {fileID: 6090558046159696829}
   - component: {fileID: 6090558046159696826}
   - component: {fileID: 6090558046159696824}
   - component: {fileID: -1441157953937304883}
+  - component: {fileID: 2430679425543540672}
   - component: {fileID: 7474816742207161554}
   m_Layer: 0
   m_Name: EnemySimpleIA Easy
@@ -322,12 +324,33 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.7
+--- !u!50 &6506323680807217393
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090558046159696828}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &6090558046159696829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,6 +437,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2430679425543540672}
+        m_TargetAssemblyTypeName: SteamBridge, Assembly-CSharp
+        m_MethodName: SetDestroyShipsAchviment
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnRevive:
     m_PersistentCalls:
       m_Calls: []
@@ -431,7 +466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 30
   damageLayer: 0
-  canDestroy: 1
+  destroy: 0
 --- !u!114 &-1441157953937304883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,6 +477,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f003f441e94af0b43a5267cda529f5f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2430679425543540672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090558046159696828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2414ec9d8dae3944db3ba13dd1d9a8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &7474816742207161554

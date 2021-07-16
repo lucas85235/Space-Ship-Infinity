@@ -18,13 +18,13 @@ public class SetEnemyPrefab : MonoBehaviour
 
     public void SetPrefab()
     {
-        for (int i = 0; i < saveList.Count; i++)
-        {
-            if (saveList[i].difficulty == SpawManager.i.currentDifficulty)
-            {
-                spawManager.spawItems[spawIndex].items[i] = saveList[i].prefab;
-            }
-        }
+        // for (int i = 0; i < saveList.Count; i++)
+        // {
+        //     if (saveList[i].difficulty == SpawManager.i.currentDifficulty)
+        //     {
+        //         spawManager.spawItems[spawIndex].items[i] = saveList[i].prefab;
+        //     }
+        // }
     }
 
     [System.Serializable]

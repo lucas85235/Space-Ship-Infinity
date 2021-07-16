@@ -63,6 +63,8 @@ public class BuyUpgrade : MonoBehaviour
         confirmBuy.Confirm = null;
         confirmBuy.gameObject.SetActive(false);
 
+        CheckBuyAchivement();
+
         if (GetCurrentUpgradeLevel() < 3)
         {
             itemPrice *= 2;
@@ -87,6 +89,20 @@ public class BuyUpgrade : MonoBehaviour
         }
 
         return l;
+    }
+
+    public void CheckBuyAchivement()
+    {
+        var sLvl = StatsManager.i.speedLevels;
+        var dLvl = StatsManager.i.damageLevels;
+        var hLvl = StatsManager.i.speedLevels;
+
+        if (StatsManager.i.speed == sLvl[sLvl.Length - 1] &&
+            StatsManager.i.damage == dLvl[dLvl.Length - 1] &&
+            StatsManager.i.health == hLvl[hLvl.Length - 1] )
+        {
+            SteamIMPL.i.SetAchivementBuyer();
+        }
     }
 
     public int GetUpgrade()

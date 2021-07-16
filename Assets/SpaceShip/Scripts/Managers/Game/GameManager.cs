@@ -56,7 +56,9 @@ public class GameManager : MonoBehaviour
         if (score > StatsManager.i.bestScore)
         {
             // check achivements
-
+            if (score >= 100) SteamIMPL.i.SetAchivementBeginner();
+            if (score >= 500) SteamIMPL.i.SetAchivementSurvivor();
+            if (score >= 1000) SteamIMPL.i.SetAchivementExperient();
 
             StatsManager.i.bestScore = score;
             PlayerPrefs.Save();

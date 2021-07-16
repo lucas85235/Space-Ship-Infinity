@@ -128,4 +128,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   precision: 1.15
+  useLife: 0
   target: {fileID: 0}

@@ -55,6 +55,16 @@ public class BuyPowerUp : MonoBehaviour
         confirmBuy.gameObject.SetActive(false);
         buy.interactable = false;
         priceText.text = "BUY";
+
+        CheckBuyAchivement();
+    }
+
+    public void CheckBuyAchivement()
+    {
+        if (StatsManager.i.powerDp && StatsManager.i.powerTs && StatsManager.i.powerH)
+        {
+            SteamIMPL.i.SetAchivementBuyer();
+        }
     }
 
     public bool GetPowerUp()

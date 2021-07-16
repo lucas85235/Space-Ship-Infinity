@@ -23,17 +23,15 @@ public class DemoMouseController : MonoBehaviour
 	[Header("Test")]
 	public bool useToTest = false;
 
-	private void Update ()
-	{
-		if (useToTest && Input.GetMouseButtonUp (0)) 
-		{
-			SpawnExplosion (Camera.main.ScreenToWorldPoint (Input.mousePosition));
-		}
-	}
+	private Vector3 spawPos = Vector3.zero;
 
 	public void SpawnExplosion ()
 	{
-		SpawnExplosion(gameObject.transform.position);
+		if (spawPos == Vector3.zero)
+		{
+			spawPos = gameObject.transform.position;
+			SpawnExplosion(spawPos);
+		}
 	}
 
 	private void SpawnExplosion (Vector2 position)
@@ -67,5 +65,7 @@ public class DemoMouseController : MonoBehaviour
 
 			ParticleFactory.instance.CreateParticle (position, colour, duration, initialScale, state);
 		}
+
+		spawPos = Vector3.zero;
 	}
 }

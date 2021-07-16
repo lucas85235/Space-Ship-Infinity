@@ -21,7 +21,7 @@ public class Coin : MonoBehaviour
     {
         if ( !PlayerPrefs.HasKey(moneySaveKey) )
         {
-            PlayerPrefs.SetInt(moneySaveKey, 1000);
+            PlayerPrefs.SetInt(moneySaveKey, 0);
             PlayerPrefs.Save();
         }
 

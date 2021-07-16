@@ -18,7 +18,7 @@ public class FinalScoreText : MonoBehaviour
 
         int value = 0;
 
-        for (int i = 0; i < GameManager.i.GetScore(); i+=25)
+        for (int i = 0; i < GameManager.i.GetScore(); i+=15)
         {
             value += 5;
         }
