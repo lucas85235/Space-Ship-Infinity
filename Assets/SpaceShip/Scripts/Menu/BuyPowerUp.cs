@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using MadeInHouse.Translate;
 
 public class BuyPowerUp : MonoBehaviour
 {
@@ -16,9 +17,30 @@ public class BuyPowerUp : MonoBehaviour
     public ConfirmBuy confirmBuy;
     public GameObject notHaveMoney;
 
-    void Start()
+    private void Awake()
     {
+        if (!LanguageManager.IsReady)
+        {
+            LanguageManager.LoadLocazidedText();
+        }
+    }
+
+    private IEnumerator Start()
+    {
+        if (!LanguageManager.IsReady)
+        {
+            yield return null;
+        }
+
+        LanguageManager.OnChangeLanguage += SetPowerBuy;
+
         SetPowerBuy();
+        CheckBuyAchivement();
+    }
+
+    private void OnDestroy()
+    {
+        LanguageManager.OnChangeLanguage -= SetPowerBuy;
     }
 
     private void SetPowerBuy()
@@ -26,11 +48,13 @@ public class BuyPowerUp : MonoBehaviour
         if (!GetPowerUp())
         {
             priceText.text = itemPrice.ToString();
-            buy.onClick.AddListener(() => TryBuy());
+
+            if (buy.onClick.GetPersistentEventCount() == 0)
+                buy.onClick.AddListener(() => TryBuy());
         }
         else
         {
-            priceText.text = "BUY";
+            priceText.text = LanguageManager.GetKeyValue("buy");
             buy.interactable = false;
         }
     }
@@ -49,12 +73,12 @@ public class BuyPowerUp : MonoBehaviour
     public void ConfirmBuy()
     {
         SetPowerUp(true);
-
         Coin.Instance.SetMoney(-itemPrice);
+
         confirmBuy.Confirm = null;
         confirmBuy.gameObject.SetActive(false);
         buy.interactable = false;
-        priceText.text = "BUY";
+        priceText.text = LanguageManager.GetKeyValue("buy");
 
         CheckBuyAchivement();
     }
@@ -64,6 +88,7 @@ public class BuyPowerUp : MonoBehaviour
         if (StatsManager.i.powerDp && StatsManager.i.powerTs && StatsManager.i.powerH)
         {
             SteamIMPL.i.SetAchivementBuyer();
+            Debug.Log("Try give achivement PowerUp");
         }
     }
 

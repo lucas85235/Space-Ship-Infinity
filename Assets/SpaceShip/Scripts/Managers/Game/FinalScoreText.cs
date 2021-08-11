@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using MadeInHouse.Translate;
 
 public class FinalScoreText : MonoBehaviour
 {
@@ -12,9 +13,9 @@ public class FinalScoreText : MonoBehaviour
     {
         if (isBestScore)
         {
-            scoreText.text = "Best score: " + GameManager.i.GetScore();
+            scoreText.text = LanguageManager.GetKeyValue("best_score") + " " + GameManager.i.GetScore();
         }
-        else scoreText.text = "Score: " + GameManager.i.GetScore();
+        else scoreText.text = LanguageManager.GetKeyValue("score") + " "  + GameManager.i.GetScore();
 
         int value = 0;
 

@@ -15,7 +15,7 @@ public class Ship : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && shoot.canFire)
+        if (Input.GetMouseButton(0) && shoot.canFire)
         {
             shoot.canFire = false;
             shoot.Shoot();

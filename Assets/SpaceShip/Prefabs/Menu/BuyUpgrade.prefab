@@ -416,7 +416,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: BUY
+  m_Text: COMPRAR
 --- !u!1 &1420477866335490123
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,10 +19,7 @@ public class SteamIMPL : MonoBehaviour
     private void Awake()
     {
         i = this;
-    }
 
-    private void Start()
-    {
         if (!SteamManager.Initialized) return;
         Debug.Log(SteamFriends.GetPersonaName());
     }

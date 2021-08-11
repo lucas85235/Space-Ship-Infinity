@@ -2,9 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using MadeInHouse.Translate;
 
 public class SceneLoader : MonoBehaviour
 {
+    private void Awake()
+    {
+        LanguageManager.Initialize();
+    }
+    
     public void LoadScene(string scene)
     {
         Time.timeScale = 1f;

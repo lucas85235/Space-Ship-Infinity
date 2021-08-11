@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using MadeInHouse.Translate;
 
 public class BuyUpgrade : MonoBehaviour
 {
@@ -17,7 +18,15 @@ public class BuyUpgrade : MonoBehaviour
     public ConfirmBuy confirmBuy;
     public GameObject notHaveMoney;
 
-    void Start()
+    private void Awake()
+    {
+        if (!LanguageManager.IsReady)
+        {
+            LanguageManager.LoadLocazidedText();
+        }
+    }
+
+    private IEnumerator Start()
     {
         foreach (var level in GetUpgradeLevels())
         {
@@ -34,14 +43,27 @@ public class BuyUpgrade : MonoBehaviour
             buy.interactable = false;
         }
 
+        if (!LanguageManager.IsReady)
+        {
+            yield return null;
+        }
+
+        LanguageManager.OnChangeLanguage += SetLevelText;
+
         SetLevelText();
+        CheckBuyAchivement();
+    }
+
+    private void OnDestroy()
+    {
+        LanguageManager.OnChangeLanguage -= SetLevelText;
     }
 
     private void SetLevelText()
     {
         int level = GetCurrentUpgradeLevel() + 1;
         levelText.text = level < 4 ? level.ToString() : "MAX";
-        priceText.text = level < 4 ? itemPrice.ToString() : "BUY";
+        priceText.text = level < 4 ? itemPrice.ToString() : LanguageManager.GetKeyValue("buy");
     }
 
     private void TryBuy()
@@ -95,13 +117,14 @@ public class BuyUpgrade : MonoBehaviour
     {
         var sLvl = StatsManager.i.speedLevels;
         var dLvl = StatsManager.i.damageLevels;
-        var hLvl = StatsManager.i.speedLevels;
+        var hLvl = StatsManager.i.healthLevels;
 
         if (StatsManager.i.speed == sLvl[sLvl.Length - 1] &&
             StatsManager.i.damage == dLvl[dLvl.Length - 1] &&
             StatsManager.i.health == hLvl[hLvl.Length - 1] )
         {
-            SteamIMPL.i.SetAchivementBuyer();
+            SteamIMPL.i.SetAchivementBeater();
+            Debug.Log("Try give achivement Upgrades");
         }
     }
 

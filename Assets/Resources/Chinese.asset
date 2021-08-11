@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3efb8167a6f85254287dc54e26d5e08b, type: 3}
+  m_Name: Chinese
+  m_EditorClassIdentifier: 
+  language:
+    items:
+    - key: settings
+      value: "\u8BBE\u7F6E"
+    - key: audio
+      value: "\u58F0\u97F3\u7684"
+    - key: post_processing
+      value: "\u540E\u671F\u5904\u7406"
+    - key: pause
+      value: "\u6682\u505C"
+    - key: resume
+      value: "\u6062\u590D"
+    - key: exit
+      value: "\u51FA\u53E3"
+    - key: game_over
+      value: "\u6E38\u620F\u7ED3\u675F"
+    - key: score
+      value: "\u5206\u6570"
+    - key: best_score
+      value: "\u6700\u4F73\u5F97\u5206"
+    - key: back
+      value: "\u80CC\u90E8"
+    - key: shop
+      value: "\u5E97\u94FA"
+    - key: buy
+      value: "\u8D2D\u4E70"
+    - key: speed
+      value: "\u901F\u5EA6"
+    - key: damage
+      value: "\u635F\u5BB3"
+    - key: health
+      value: "\u5065\u5EB7"
+    - key: play
+      value: "\u73A9"
+    - key: quit
+      value: "\u51FA\u53BB"
+    - key: not_have
+      value: "\u4F60\u6CA1\u6709\u786C\u5E01"
+    - key: confirm
+      value: "\u786E\u8BA4\u8D2D\u4E70\uFF1F"
+    - key: yes
+      value: "\u662F\u7684"
+    - key: no
+      value: "\u4E0D"
